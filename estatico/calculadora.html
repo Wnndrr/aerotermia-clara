@@ -1,0 +1,42 @@
+<form class="calc" id="calc" onsubmit="return false">
+  <h2>Calcula tu caso</h2>
+  <div class="calc-campos">
+    <div><label for="c-m2">Superficie (m²)</label><input id="c-m2" type="number" min="30" max="400" step="5" value="100" inputmode="numeric"></div>
+    <div><label for="c-zona">Invierno en tu zona</label>
+      <select id="c-zona">
+        <option value="90">Frío (Burgos, León, Madrid)</option>
+        <option value="60" selected>Templado (Barcelona, Bilbao, Zaragoza)</option>
+        <option value="35">Suave (Sevilla, Valencia, Málaga)</option>
+      </select></div>
+    <div><label for="c-sis">Calefacción actual</label>
+      <select id="c-sis">
+        <option value="gas" selected>Caldera de gas natural</option>
+        <option value="gasoleo">Caldera de gasóleo</option>
+        <option value="propano">Caldera de propano o butano</option>
+        <option value="elec">Radiadores o caldera eléctrica</option>
+      </select></div>
+    <div><label for="c-em">Con aerotermia usarás</label>
+      <select id="c-em">
+        <option value="exist">Tus radiadores actuales</option>
+        <option value="baja" selected>Radiadores de baja temperatura</option>
+        <option value="suelo">Suelo radiante (hay que instalarlo)</option>
+        <option value="suelo-hecho">Suelo radiante (ya lo tienes)</option>
+      </select></div>
+  </div>
+  <details>
+    <summary>Cambiar los precios de la energía</summary>
+    <div class="calc-campos">
+      <div><label for="c-luz">Luz (€/kWh)</label><input id="c-luz" type="number" min="0.05" max="0.6" step="0.01" value="0.18"></div>
+      <div><label for="c-comb">Tu combustible actual (€/kWh)</label><input id="c-comb" type="number" min="0.02" max="0.6" step="0.01" value="0.08"></div>
+    </div>
+  </details>
+  <div class="calc-salida" aria-live="polite">
+    <div class="calc-dato"><b id="r-precio">—</b><span>Instalación completa, sin ayudas</span></div>
+    <div class="calc-dato"><b id="r-ahora">—</b><span>Gastas ahora al año en calefacción y agua caliente</span></div>
+    <div class="calc-dato"><b id="r-aero">—</b><span>Gastarías con aerotermia</span></div>
+    <div class="calc-dato caliente"><b id="r-ahorro">—</b><span>Ahorro anual estimado</span></div>
+    <div class="calc-dato caliente"><b id="r-anos">—</b><span>Años para recuperar la inversión, sin ayudas</span></div>
+  </div>
+  <p class="calc-nota">Estimación orientativa para una vivienda con aislamiento medio. No sustituye al estudio de un instalador. <a href="/calculadora/#metodo">Cómo se calcula</a>.</p>
+</form>
+<script src="/calc.js" defer></script>

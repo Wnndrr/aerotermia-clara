@@ -1,0 +1,43 @@
+tipo: pagina
+slug: calculadora
+ancha: si
+title: Calculadora de aerotermia: precio, ahorro anual y amortización
+desc: Calcula gratis cuánto cuesta instalar aerotermia en tu vivienda, cuánto ahorras al año frente a gas, gasóleo o electricidad y en cuántos años la amortizas.
+h1: Calculadora de aerotermia: precio, ahorro y amortización
+---
+<p class="entrada texto">Indica la superficie, el clima de tu zona y la calefacción que usas hoy. El resultado es un rango orientativo, no un presupuesto.</p>
+
+<div style="max-width:46rem">{{CALCULADORA}}</div>
+
+<div class="texto">
+<h2 id="metodo">Cómo se calcula</h2>
+<p>La calculadora sigue cuatro pasos. Puedes repetirlos a mano con tus facturas para afinar el resultado.</p>
+<ol>
+  <li><strong>Calor que necesita la casa.</strong> Multiplica los metros por una demanda de calefacción de 90, 60 o 35 kWh por m² y año, según el invierno sea frío, templado o suave. Suma 2.000 kWh al año de agua caliente, el consumo de un hogar medio.</li>
+  <li><strong>Lo que gastas ahora.</strong> Divide ese calor entre el rendimiento de tu sistema (0,92 en una caldera de gas de condensación, 0,85 en una de gasóleo, 0,90 en propano, 1 en eléctrico) y lo multiplica por el precio del combustible. En gas añade 100 € al año de término fijo, que desaparece si das de baja el suministro.</li>
+  <li><strong>Lo que gastarías con aerotermia.</strong> Divide el calor de calefacción entre el rendimiento estacional (SCOP): 3,0 con radiadores convencionales, 3,8 con radiadores de baja temperatura y 4,3 con suelo radiante. El agua caliente se calcula con un rendimiento de 2,8. El resultado se multiplica por el precio de la luz.</li>
+  <li><strong>Precio de la instalación.</strong> Interpola entre precios de mercado de 2026 para viviendas de 70 a 200 m². Si eliges instalar suelo radiante, suma entre 40 y 70 € por m² de obra.</li>
+</ol>
+
+<h2>Precios de la energía que usa por defecto</h2>
+<div class="tabla"><table>
+<thead><tr><th>Energía</th><th class="num">Precio por kWh</th><th>De dónde sale</th></tr></thead>
+<tbody>
+<tr><th>Electricidad</th><td class="num">0,18 €</td><td>Precio del kWh con impuestos, sin contar el término de potencia. La media de Eurostat para hogares españoles con consumo alto, con todo incluido, fue de 0,22 € en el primer semestre de 2026.</td></tr>
+<tr><th>Gas natural</th><td class="num">0,08 €</td><td>Eurostat situó en 0,079 € el precio medio con impuestos de los hogares españoles con calefacción de gas en el primer semestre de 2026.</td></tr>
+<tr><th>Gasóleo de calefacción</th><td class="num">0,11 €</td><td>Estimación propia: equivale a pagar el litro a 1,10 €.</td></tr>
+<tr><th>Propano</th><td class="num">0,14 €</td><td>Estimación propia. Varía mucho entre granel y bombonas.</td></tr>
+</tbody></table></div>
+<p>Si tu factura dice otra cosa, abre «Cambiar los precios de la energía» y pon tus cifras. Es lo que más mueve el resultado.</p>
+
+<h2>Qué no tiene en cuenta</h2>
+<ul>
+  <li><strong>El aislamiento real de tu casa.</strong> Una vivienda antigua sin aislar puede necesitar el doble de calor; una de obra nueva, la mitad.</li>
+  <li><strong>Las ayudas.</strong> La deducción del IRPF y los Certificados de Ahorro Energético acortan la amortización. Consulta la <a href="/ayudas/">sección de ayudas</a>.</li>
+  <li><strong>El coste de no hacer nada.</strong> Si tu caldera está al final de su vida, tendrías que gastar de todos modos entre 2.000 y 3.500 € en una nueva. La inversión que hay que amortizar es la diferencia.</li>
+  <li><strong>La refrigeración.</strong> Con suelo radiante o fancoils la aerotermia también enfría en verano, algo que una caldera no hace.</li>
+  <li><strong>Una posible subida de potencia contratada</strong> y los cambios futuros en el precio de la luz y del gas.</li>
+</ul>
+
+<p class="fuentes">Fuentes: precios de instalación de <a href="https://climate.selectra.com/es/aerotermia/precio" rel="nofollow">Selectra (2026)</a>; precios de la energía de Eurostat, primer semestre de 2026, recogidos por <a href="https://selectra.es/energia/noticias/kwh-luz-2026-consumo-bajo-precio-caro" rel="nofollow">Selectra</a>. Demandas de calefacción y rendimientos: valores orientativos propios. Última revisión: 15 de noviembre de 2026.</p>
+</div>

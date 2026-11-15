@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de aerotermia: precio, ahorro anual y amortización</title>
+<meta name="description" content="Calcula gratis cuánto cuesta instalar aerotermia en tu vivienda, cuánto ahorras al año frente a gas, gasóleo o electricidad y en cuántos años la amortizas.">
+<link rel="canonical" href="https://aerotermiaclara.es/calculadora/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Calculadora de aerotermia: precio, ahorro anual y amortización">
+<meta property="og:description" content="Calcula gratis cuánto cuesta instalar aerotermia en tu vivienda, cuánto ahorras al año frente a gas, gasóleo o electricidad y en cuántos años la amortizas.">
+<meta property="og:url" content="https://aerotermiaclara.es/calculadora/">
+<meta property="og:site_name" content="Aerotermia Clara">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../estilo.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://aerotermiaclara.es/"}, {"@type": "ListItem", "position": 2, "name": "Calculadora de aerotermia: precio, ahorro y amortización", "item": "https://aerotermiaclara.es/calculadora/"}]}</script>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="ancho cabecera-fila">
+    <a class="marca" href="../" aria-label="Aerotermia Clara, inicio">
+      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0E4C6B"/><path d="M7 20c3-6 6-6 9 0s6 6 9 0" fill="none" stroke="#F4B13E" stroke-width="2.6" stroke-linecap="round"/><path d="M7 13c3-6 6-6 9 0s6 6 9 0" fill="none" stroke="#BFE3F2" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <span>Aerotermia Clara</span>
+    </a>
+    <nav class="menu" aria-label="Secciones"><a href="../precios/">Precios</a><a href="../ayudas/">Ayudas</a><a href="../comparativas/">Comparativas</a><a href="../marcas/">Marcas</a><a href="../instalacion/">Instalación</a><a href="../consumo/">Consumo</a><a href="../problemas/">Problemas</a><a href="../calculadora/" aria-current="page">Calculadora</a></nav>
+  </div>
+  <div class="franja" aria-hidden="true"></div>
+</header>
+<main id="contenido">
+<article class="ancho"><nav class="migas" aria-label="Estás en"><a href="../">Inicio</a></nav><h1>Calculadora de aerotermia: precio, ahorro y amortización</h1><p class="entrada texto">Indica la superficie, el clima de tu zona y la calefacción que usas hoy. El resultado es un rango orientativo, no un presupuesto.</p>
+
+<div style="max-width:46rem"><form class="calc" id="calc" onsubmit="return false">
+  <h2>Calcula tu caso</h2>
+  <div class="calc-campos">
+    <div><label for="c-m2">Superficie (m²)</label><input id="c-m2" type="number" min="30" max="400" step="5" value="100" inputmode="numeric"></div>
+    <div><label for="c-zona">Invierno en tu zona</label>
+      <select id="c-zona">
+        <option value="90">Frío (Burgos, León, Madrid)</option>
+        <option value="60" selected>Templado (Barcelona, Bilbao, Zaragoza)</option>
+        <option value="35">Suave (Sevilla, Valencia, Málaga)</option>
+      </select></div>
+    <div><label for="c-sis">Calefacción actual</label>
+      <select id="c-sis">
+        <option value="gas" selected>Caldera de gas natural</option>
+        <option value="gasoleo">Caldera de gasóleo</option>
+        <option value="propano">Caldera de propano o butano</option>
+        <option value="elec">Radiadores o caldera eléctrica</option>
+      </select></div>
+    <div><label for="c-em">Con aerotermia usarás</label>
+      <select id="c-em">
+        <option value="exist">Tus radiadores actuales</option>
+        <option value="baja" selected>Radiadores de baja temperatura</option>
+        <option value="suelo">Suelo radiante (hay que instalarlo)</option>
+        <option value="suelo-hecho">Suelo radiante (ya lo tienes)</option>
+      </select></div>
+  </div>
+  <details>
+    <summary>Cambiar los precios de la energía</summary>
+    <div class="calc-campos">
+      <div><label for="c-luz">Luz (€/kWh)</label><input id="c-luz" type="number" min="0.05" max="0.6" step="0.01" value="0.18"></div>
+      <div><label for="c-comb">Tu combustible actual (€/kWh)</label><input id="c-comb" type="number" min="0.02" max="0.6" step="0.01" value="0.08"></div>
+    </div>
+  </details>
+  <div class="calc-salida" aria-live="polite">
+    <div class="calc-dato"><b id="r-precio">—</b><span>Instalación completa, sin ayudas</span></div>
+    <div class="calc-dato"><b id="r-ahora">—</b><span>Gastas ahora al año en calefacción y agua caliente</span></div>
+    <div class="calc-dato"><b id="r-aero">—</b><span>Gastarías con aerotermia</span></div>
+    <div class="calc-dato caliente"><b id="r-ahorro">—</b><span>Ahorro anual estimado</span></div>
+    <div class="calc-dato caliente"><b id="r-anos">—</b><span>Años para recuperar la inversión, sin ayudas</span></div>
+  </div>
+  <p class="calc-nota">Estimación orientativa para una vivienda con aislamiento medio. No sustituye al estudio de un instalador. <a href="../calculadora/#metodo">Cómo se calcula</a>.</p>
+</form>
+<script src="../calc.js" defer></script>
+</div>
+
+<div class="texto">
+<h2 id="metodo">Cómo se calcula</h2>
+<p>La calculadora sigue cuatro pasos. Puedes repetirlos a mano con tus facturas para afinar el resultado.</p>
+<ol>
+  <li><strong>Calor que necesita la casa.</strong> Multiplica los metros por una demanda de calefacción de 90, 60 o 35 kWh por m² y año, según el invierno sea frío, templado o suave. Suma 2.000 kWh al año de agua caliente, el consumo de un hogar medio.</li>
+  <li><strong>Lo que gastas ahora.</strong> Divide ese calor entre el rendimiento de tu sistema (0,92 en una caldera de gas de condensación, 0,85 en una de gasóleo, 0,90 en propano, 1 en eléctrico) y lo multiplica por el precio del combustible. En gas añade 100 € al año de término fijo, que desaparece si das de baja el suministro.</li>
+  <li><strong>Lo que gastarías con aerotermia.</strong> Divide el calor de calefacción entre el rendimiento estacional (SCOP): 3,0 con radiadores convencionales, 3,8 con radiadores de baja temperatura y 4,3 con suelo radiante. El agua caliente se calcula con un rendimiento de 2,8. El resultado se multiplica por el precio de la luz.</li>
+  <li><strong>Precio de la instalación.</strong> Interpola entre precios de mercado de 2026 para viviendas de 70 a 200 m². Si eliges instalar suelo radiante, suma entre 40 y 70 € por m² de obra.</li>
+</ol>
+
+<h2>Precios de la energía que usa por defecto</h2>
+<div class="tabla"><table>
+<thead><tr><th>Energía</th><th class="num">Precio por kWh</th><th>De dónde sale</th></tr></thead>
+<tbody>
+<tr><th>Electricidad</th><td class="num">0,18 €</td><td>Precio del kWh con impuestos, sin contar el término de potencia. La media de Eurostat para hogares españoles con consumo alto, con todo incluido, fue de 0,22 € en el primer semestre de 2026.</td></tr>
+<tr><th>Gas natural</th><td class="num">0,08 €</td><td>Eurostat situó en 0,079 € el precio medio con impuestos de los hogares españoles con calefacción de gas en el primer semestre de 2026.</td></tr>
+<tr><th>Gasóleo de calefacción</th><td class="num">0,11 €</td><td>Estimación propia: equivale a pagar el litro a 1,10 €.</td></tr>
+<tr><th>Propano</th><td class="num">0,14 €</td><td>Estimación propia. Varía mucho entre granel y bombonas.</td></tr>
+</tbody></table></div>
+<p>Si tu factura dice otra cosa, abre «Cambiar los precios de la energía» y pon tus cifras. Es lo que más mueve el resultado.</p>
+
+<h2>Qué no tiene en cuenta</h2>
+<ul>
+  <li><strong>El aislamiento real de tu casa.</strong> Una vivienda antigua sin aislar puede necesitar el doble de calor; una de obra nueva, la mitad.</li>
+  <li><strong>Las ayudas.</strong> La deducción del IRPF y los Certificados de Ahorro Energético acortan la amortización. Consulta la <a href="../ayudas/">sección de ayudas</a>.</li>
+  <li><strong>El coste de no hacer nada.</strong> Si tu caldera está al final de su vida, tendrías que gastar de todos modos entre 2.000 y 3.500 € en una nueva. La inversión que hay que amortizar es la diferencia.</li>
+  <li><strong>La refrigeración.</strong> Con suelo radiante o fancoils la aerotermia también enfría en verano, algo que una caldera no hace.</li>
+  <li><strong>Una posible subida de potencia contratada</strong> y los cambios futuros en el precio de la luz y del gas.</li>
+</ul>
+
+<p class="fuentes">Fuentes: precios de instalación de <a href="https://climate.selectra.com/es/aerotermia/precio" rel="nofollow">Selectra (2026)</a>; precios de la energía de Eurostat, primer semestre de 2026, recogidos por <a href="https://selectra.es/energia/noticias/kwh-luz-2026-consumo-bajo-precio-caro" rel="nofollow">Selectra</a>. Demandas de calefacción y rendimientos: valores orientativos propios. Última revisión: 15 de noviembre de 2026.</p>
+</div></article>
+</main>
+<footer class="pie">
+  <div class="ancho pie-fila">
+    <p><strong>Aerotermia Clara</strong><br>Información independiente sobre aerotermia para viviendas en España. No instalamos ni vendemos equipos.</p>
+    <nav aria-label="Enlaces del pie">
+      <a href="../guia/">Guía básica</a>
+      <a href="../calculadora/">Calculadora</a>
+      <a href="../sobre-nosotros/">Quiénes somos</a>
+      <a href="../contacto/">Contacto</a>
+      <a href="../aviso-legal/">Aviso legal</a>
+      <a href="../privacidad/">Privacidad</a>
+      <a href="../cookies/">Cookies</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
