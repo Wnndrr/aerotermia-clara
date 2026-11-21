@@ -31,8 +31,7 @@ a:hover { color: var(--calor-fuerte); }
 .cabecera-fila { display: flex; align-items: center; gap: 1.5rem; padding-block: .7rem; }
 .marca { display: flex; align-items: center; gap: .55rem; text-decoration: none; color: var(--tinta);
   font: 700 1.2rem/1 var(--titulos); white-space: nowrap; }
-.menu { display: flex; gap: .2rem; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
-.menu::-webkit-scrollbar { display: none; }
+.menu { display: flex; flex-wrap: wrap; gap: .2rem; margin-left: auto; }
 .menu a { padding: .45rem .7rem; border-radius: 999px; text-decoration: none; color: var(--tinta);
   font-size: .95rem; white-space: nowrap; }
 .menu a:hover { background: var(--frio-claro); color: var(--frio); }
@@ -118,8 +117,15 @@ td.num, th.num { text-align: right; white-space: nowrap; }
 
 @media (max-width: 52rem) {
   .portada { grid-template-columns: 1fr; gap: 1.5rem; }
-  .cabecera-fila { flex-direction: column; align-items: stretch; gap: .5rem; }
-  .menu { margin-left: 0; }
   .cabecera { position: static; }
+}
+/* Con poco ancho, el menú baja debajo del logo y se reparte en varias filas: todas las opciones quedan a la vista */
+@media (max-width: 75rem) {
+  .cabecera-fila { flex-direction: column; align-items: flex-start; gap: .5rem; }
+  .menu { margin-left: -.7rem; }
+}
+@media (max-width: 30rem) {
+  .menu { gap: .15rem .1rem; }
+  .menu a { padding: .4rem .6rem; font-size: .92rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

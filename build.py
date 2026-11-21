@@ -109,7 +109,8 @@ def plantilla(meta, cuerpo, url, extra_head=""):
     titulo = meta["title"]
     desc = meta.get("desc", "")
     canon = DOMINIO + url
-    menu = "".join(
+    inicio = '<a href="/"%s>Inicio</a>' % (' aria-current="page"' if url == "/" else "")
+    menu = inicio + "".join(
         '<a href="/%s/"%s>%s</a>' % (s, ' aria-current="page"' if url.startswith("/%s/" % s) else "", n)
         for s, n in MENU)
     ads = (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
@@ -299,6 +300,7 @@ def main():
                      '<p>Puede que el enlace esté mal escrito o que hayamos movido el artículo. '
                      'Vuelve al <a href="/">inicio</a> o abre la <a href="/calculadora/">calculadora</a>.</p></article>',
                      "/")
+    p404 = p404.replace(' aria-current="page"', "")
     (SAL / "404.html").write_text(p404.replace('href="./', 'href="/').replace('src="./', 'src="/'), encoding="utf-8")
     print(f"Hecho: {len(urls)} páginas en {SAL}")
 
