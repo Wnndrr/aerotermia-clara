@@ -1,4 +1,4 @@
-/* Calculadora de potencia de Aerotermia Clara. Método explicado en /calculadora-potencia/ */
+/* Calculadora de potencia de Guía de Aerotermia. Método explicado en /calculadora-potencia/ */
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   if (!$('pot')) return;

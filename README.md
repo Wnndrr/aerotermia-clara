@@ -1,4 +1,4 @@
-# Aerotermia Clara
+# Guía de Aerotermia
 
 Web estática sobre aerotermia doméstica en España. No necesita WordPress ni servidor.
 
@@ -15,9 +15,9 @@ Web estática sobre aerotermia doméstica en España. No necesita WordPress ni s
 2. En el repositorio: Settings → Pages → Source: «Deploy from a branch» → Branch `main`, carpeta `/docs` → Save.
 3. En un par de minutos la web estará en `https://USUARIO.github.io/NOMBRE-DEL-REPOSITORIO/`.
 
-## Conectar el dominio aerotermiaclara.es
+## Conectar el dominio guiadeaerotermia.es
 
-1. En Settings → Pages → Custom domain escribe `aerotermiaclara.es` y guarda.
+1. En Settings → Pages → Custom domain escribe `guiadeaerotermia.es` y guarda.
 2. En el panel del registrador del dominio crea los registros DNS que indica la ayuda de GitHub Pages
    para dominios propios (cuatro registros A para el dominio y un CNAME para `www`).
 3. Cuando GitHub lo verifique, marca «Enforce HTTPS».

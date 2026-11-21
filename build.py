@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generador de Aerotermia Clara.
+"""Generador de Guía de Aerotermia.
 
 Lee los textos de contenido/ y crea la web completa en docs/.
 Uso:  python3 build.py
@@ -12,10 +12,10 @@ import shutil
 from pathlib import Path
 
 # ---------------------------------------------------------------- Ajustes
-DOMINIO = "https://aerotermiaclara.es"   # sin barra final
-MARCA = "Aerotermia Clara"
+DOMINIO = "https://guiadeaerotermia.es"   # sin barra final
+MARCA = "Guía de Aerotermia"
 TITULAR = "Wanderson Badaro"
-CORREO = "hola@aerotermiaclara.es"        # cámbialo por el correo real
+CORREO = "hola@guiadeaerotermia.es"        # cámbialo por el correo real
 ADSENSE_ID = ""                           # p. ej. "ca-pub-1234567890123456" cuando AdSense apruebe la web
 
 RAIZ = Path(__file__).parent
@@ -75,7 +75,7 @@ def url_de(meta):
 
 def relativizar(codigo, url):
     """Convierte los enlaces internos '/x/' en relativos, para que la web
-    funcione igual en aerotermiaclara.es y en usuario.github.io/repositorio/."""
+    funcione igual en guiadeaerotermia.es y en usuario.github.io/repositorio/."""
     prof = len([p for p in url.split("/") if p])
     pref = "../" * prof or "./"
     return re.sub(r'(href|src)="/(?!/)', lambda m: f'{m.group(1)}="{pref}', codigo)
@@ -292,6 +292,8 @@ def main():
         if f.suffix != ".html":
             shutil.copy(f, SAL / f.name)
     (SAL / ".nojekyll").write_text("")
+    # Dominio propio para GitHub Pages
+    (SAL / "CNAME").write_text(DOMINIO.replace("https://", "") + "\n")
     (SAL / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {DOMINIO}/sitemap.xml\n")
     mapa = "".join(f"<url><loc>{DOMINIO}{u}</loc><lastmod>{f}</lastmod></url>\n" for u, f in sorted(urls))
     (SAL / "sitemap.xml").write_text(

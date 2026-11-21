@@ -1,4 +1,4 @@
-/* Calculadora de Aerotermia Clara. Método explicado en /calculadora/ */
+/* Calculadora de Guía de Aerotermia. Método explicado en /calculadora/ */
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   if (!$('calc')) return;
