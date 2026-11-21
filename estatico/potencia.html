@@ -1,0 +1,39 @@
+<form class="calc" id="pot" onsubmit="return false">
+  <h2>Calcula la potencia</h2>
+  <div class="calc-campos">
+    <div><label for="p-m2">Superficie a calentar (m²)</label><input id="p-m2" type="number" min="20" max="500" step="5" value="100" inputmode="numeric"></div>
+    <div><label for="p-alt">Altura de los techos</label>
+      <select id="p-alt">
+        <option value="2.5" selected>Normal (2,5 m)</option>
+        <option value="2.8">Algo alta (2,8 m)</option>
+        <option value="3.2">Alta (3 m o más)</option>
+      </select></div>
+    <div><label for="p-zona">Clima de invierno</label>
+      <select id="p-zona">
+        <option value="0">Suave (Málaga, Valencia)</option>
+        <option value="1">Templado (Barcelona, Bilbao)</option>
+        <option value="2" selected>Frío (Madrid, Zaragoza)</option>
+        <option value="3">Muy frío (Burgos, León)</option>
+      </select></div>
+    <div><label for="p-ais">Aislamiento</label>
+      <select id="p-ais">
+        <option value="0">Bueno (después de 2007)</option>
+        <option value="1" selected>Medio (de 1980 a 2006)</option>
+        <option value="2">Malo (antes de 1980)</option>
+      </select></div>
+    <div><label for="p-tipo">Tipo de vivienda</label>
+      <select id="p-tipo">
+        <option value="0.85">Piso entre plantas</option>
+        <option value="1" selected>Ático o bajo</option>
+        <option value="1.15">Casa o adosado</option>
+      </select></div>
+  </div>
+  <div class="calc-salida" aria-live="polite">
+    <div class="calc-dato"><b id="p-calc">—</b><span>Potencia de calefacción necesaria</span></div>
+    <div class="calc-dato caliente"><b id="p-equipo">—</b><span>Equipo que deberían proponerte</span></div>
+    <div class="calc-dato"><b id="p-alerta">—</b><span>Si te ofrecen más de esto, pregunta por qué</span></div>
+    <div class="calc-dato"><b id="p-elec">—</b><span>Consumo eléctrico máximo aproximado de la bomba de calor</span></div>
+  </div>
+  <p class="calc-nota">Cálculo orientativo por superficie. El dato definitivo sale del cálculo de cargas térmicas que debe hacer el instalador visitando la vivienda. <a href="/calculadora-potencia/#metodo">Cómo se calcula</a>.</p>
+</form>
+<script src="/potencia.js" defer></script>

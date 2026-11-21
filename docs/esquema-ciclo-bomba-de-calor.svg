@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Ciclo de una bomba de calor de aerotermia</title>
+  <desc id="d">El refrigerante toma calor del aire exterior en el evaporador, el compresor lo calienta, cede el calor al agua de la casa en el condensador y la válvula de expansión lo vuelve a enfriar.</desc>
+  <defs>
+    <marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12222C"/></marker>
+    <marker id="fb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3B8DB8"/></marker>
+    <marker id="fn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B8650A"/></marker>
+  </defs>
+  <rect width="900" height="450" rx="10" fill="#FFFFFF"/>
+
+  <!-- Circuito de refrigerante -->
+  <path d="M250 170V80H380" fill="none" stroke="#3B8DB8" stroke-width="6" marker-end="url(#fb)"/>
+  <path d="M520 80H650V170" fill="none" stroke="#B8650A" stroke-width="6" marker-end="url(#fn)"/>
+  <path d="M650 290V385H520" fill="none" stroke="#E0A43A" stroke-width="6" marker-end="url(#fn)"/>
+  <path d="M380 385H250V290" fill="none" stroke="#3B8DB8" stroke-width="6" marker-end="url(#fb)"/>
+  <text x="262" y="128" font-size="13" fill="#4A5C68">gas frío</text>
+  <text x="532" y="66" font-size="13" fill="#4A5C68">gas muy caliente</text>
+  <text x="662" y="345" font-size="13" fill="#4A5C68">líquido templado</text>
+  <text x="262" y="408" font-size="13" fill="#4A5C68">líquido muy frío</text>
+
+  <!-- 1 Evaporador -->
+  <rect x="160" y="170" width="180" height="120" rx="8" fill="#DCEEF6" stroke="#0E4C6B" stroke-width="2"/>
+  <text x="250" y="198" font-size="16" font-weight="700" text-anchor="middle" fill="#0E4C6B">1. Evaporación</text>
+  <text x="250" y="222" font-size="13" text-anchor="middle" fill="#12222C">En la unidad exterior,</text>
+  <text x="250" y="240" font-size="13" text-anchor="middle" fill="#12222C">el refrigerante toma</text>
+  <text x="250" y="258" font-size="13" text-anchor="middle" fill="#12222C">calor del aire</text>
+
+  <!-- 2 Compresor -->
+  <rect x="380" y="40" width="140" height="80" rx="8" fill="#FCEBC9" stroke="#B8650A" stroke-width="2"/>
+  <text x="450" y="68" font-size="16" font-weight="700" text-anchor="middle" fill="#8A4A06">2. Compresión</text>
+  <text x="450" y="90" font-size="13" text-anchor="middle" fill="#12222C">sube su temperatura</text>
+  <text x="450" y="107" font-size="13" text-anchor="middle" fill="#12222C">con electricidad</text>
+  <path d="M450 6V36" stroke="#12222C" stroke-width="2" marker-end="url(#fa)"/>
+  <text x="460" y="22" font-size="13" fill="#12222C">Electricidad: 1 kWh</text>
+
+  <!-- 3 Condensador -->
+  <rect x="560" y="170" width="180" height="120" rx="8" fill="#FCEBC9" stroke="#B8650A" stroke-width="2"/>
+  <text x="650" y="198" font-size="16" font-weight="700" text-anchor="middle" fill="#8A4A06">3. Condensación</text>
+  <text x="650" y="222" font-size="13" text-anchor="middle" fill="#12222C">El refrigerante cede</text>
+  <text x="650" y="240" font-size="13" text-anchor="middle" fill="#12222C">el calor al agua</text>
+  <text x="650" y="258" font-size="13" text-anchor="middle" fill="#12222C">de la casa</text>
+
+  <!-- 4 Valvula -->
+  <rect x="380" y="350" width="140" height="70" rx="8" fill="#DCEEF6" stroke="#0E4C6B" stroke-width="2"/>
+  <text x="450" y="377" font-size="16" font-weight="700" text-anchor="middle" fill="#0E4C6B">4. Expansión</text>
+  <text x="450" y="399" font-size="13" text-anchor="middle" fill="#12222C">baja la presión</text>
+  <text x="450" y="414" font-size="13" text-anchor="middle" fill="#12222C">y vuelve a enfriarse</text>
+
+  <!-- Aire exterior -->
+  <text x="18" y="196" font-size="13" fill="#12222C">Aire de la calle</text>
+  <path d="M20 206H156" stroke="#3B8DB8" stroke-width="3" marker-end="url(#fb)"/>
+  <text x="18" y="270" font-size="13" fill="#12222C">Sale más frío</text>
+  <path d="M156 254H24" stroke="#3B8DB8" stroke-width="3" marker-end="url(#fb)"/>
+
+  <!-- Agua de la casa -->
+  <text x="752" y="196" font-size="13" fill="#12222C">Agua a la casa</text>
+  <path d="M744 206H880" stroke="#B8650A" stroke-width="3" marker-end="url(#fn)"/>
+  <text x="752" y="270" font-size="13" fill="#12222C">Agua de vuelta</text>
+  <path d="M880 254H748" stroke="#3B8DB8" stroke-width="3" marker-end="url(#fb)"/>
+
+  <text x="18" y="438" font-size="13" fill="#4A5C68">Por cada kWh de electricidad, la casa recibe entre 3 y 4,5 kWh de calor.</text>
+</svg>

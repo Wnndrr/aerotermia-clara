@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Esquema de una instalación de aerotermia monobloc en una vivienda</title>
+  <desc id="d">La unidad exterior envía agua caliente al módulo hidráulico. Una válvula de tres vías la reparte entre el depósito de agua caliente sanitaria y el circuito de calefacción con radiadores, suelo radiante o fancoils. Una línea eléctrica propia alimenta la unidad exterior.</desc>
+  <rect width="900" height="480" rx="10" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="232" height="480" rx="10" fill="#EEF6FA"/>
+  <rect x="226" y="0" width="6" height="480" fill="#EEF6FA"/>
+  <rect x="232" y="20" width="14" height="420" fill="#C9D3DA"/>
+  <text x="24" y="40" font-size="15" font-weight="700" fill="#0E4C6B">Exterior</text>
+  <text x="264" y="40" font-size="15" font-weight="700" fill="#0E4C6B">Interior de la vivienda</text>
+
+  <!-- Tuberias: unidad exterior a modulo -->
+  <path d="M200 200H300" stroke="#B8650A" stroke-width="6"/>
+  <path d="M200 230H300" stroke="#3B8DB8" stroke-width="6"/>
+  <!-- Modulo a valvula -->
+  <path d="M440 200H486" stroke="#B8650A" stroke-width="6"/>
+  <path d="M440 230H486" stroke="#3B8DB8" stroke-width="6"/>
+  <!-- Valvula a deposito -->
+  <path d="M496 200V95H570" fill="none" stroke="#B8650A" stroke-width="6"/>
+  <path d="M512 200V125H570" fill="none" stroke="#3B8DB8" stroke-width="6"/>
+  <!-- Valvula a emisores -->
+  <path d="M496 232V320H570" fill="none" stroke="#B8650A" stroke-width="6"/>
+  <path d="M512 232V350H570" fill="none" stroke="#3B8DB8" stroke-width="6"/>
+
+  <!-- Unidad exterior -->
+  <rect x="40" y="160" width="160" height="110" rx="8" fill="#FFFFFF" stroke="#0E4C6B" stroke-width="2"/>
+  <circle cx="98" cy="215" r="34" fill="#DCEEF6" stroke="#0E4C6B" stroke-width="2"/>
+  <path d="M98 215l0-26M98 215l23 13M98 215l-23 13" stroke="#0E4C6B" stroke-width="5" stroke-linecap="round"/>
+  <rect x="146" y="180" width="36" height="70" rx="4" fill="#DCEEF6" stroke="#0E4C6B" stroke-width="1.5"/>
+  <text x="120" y="296" font-size="15" font-weight="700" text-anchor="middle" fill="#12222C">Unidad exterior</text>
+  <text x="120" y="315" font-size="13" text-anchor="middle" fill="#4A5C68">la bomba de calor</text>
+
+  <!-- Modulo hidraulico -->
+  <rect x="300" y="160" width="140" height="110" rx="8" fill="#FFFFFF" stroke="#0E4C6B" stroke-width="2"/>
+  <text x="370" y="196" font-size="15" font-weight="700" text-anchor="middle" fill="#12222C">Módulo</text>
+  <text x="370" y="214" font-size="15" font-weight="700" text-anchor="middle" fill="#12222C">hidráulico</text>
+  <text x="370" y="236" font-size="13" text-anchor="middle" fill="#4A5C68">mueve el agua</text>
+  <text x="370" y="253" font-size="13" text-anchor="middle" fill="#4A5C68">y controla el equipo</text>
+
+  <!-- Valvula de 3 vias -->
+  <circle cx="504" cy="216" r="18" fill="#FFFFFF" stroke="#12222C" stroke-width="2"/>
+  <path d="M494 206l20 20M514 206l-20 20" stroke="#12222C" stroke-width="2"/>
+  <text x="530" y="212" font-size="13" fill="#12222C">Válvula</text>
+  <text x="530" y="229" font-size="13" fill="#12222C">de 3 vías</text>
+
+  <!-- Deposito ACS -->
+  <rect x="570" y="40" width="120" height="150" rx="40" fill="#FCEBC9" stroke="#B8650A" stroke-width="2"/>
+  <text x="630" y="98" font-size="15" font-weight="700" text-anchor="middle" fill="#8A4A06">Depósito</text>
+  <text x="630" y="116" font-size="13" text-anchor="middle" fill="#12222C">agua caliente</text>
+  <text x="630" y="133" font-size="13" text-anchor="middle" fill="#12222C">150–300 litros</text>
+  <path d="M690 80H770" stroke="#B8650A" stroke-width="4"/>
+  <text x="778" y="85" font-size="13" fill="#12222C">Grifos y duchas</text>
+  <path d="M770 160H690" stroke="#3B8DB8" stroke-width="4"/>
+  <text x="778" y="165" font-size="13" fill="#12222C">Agua fría de la red</text>
+
+  <!-- Emisores -->
+  <rect x="570" y="290" width="230" height="90" rx="8" fill="#FFFFFF" stroke="#0E4C6B" stroke-width="2"/>
+  <g fill="#DCEEF6" stroke="#0E4C6B" stroke-width="1.5">
+    <rect x="588" y="306" width="10" height="56" rx="3"/><rect x="602" y="306" width="10" height="56" rx="3"/><rect x="616" y="306" width="10" height="56" rx="3"/><rect x="630" y="306" width="10" height="56" rx="3"/>
+  </g>
+  <text x="656" y="322" font-size="15" font-weight="700" fill="#12222C">Calefacción</text>
+  <text x="656" y="342" font-size="13" fill="#4A5C68">radiadores, suelo</text>
+  <text x="656" y="359" font-size="13" fill="#4A5C68">radiante o fancoils</text>
+
+  <!-- Electricidad -->
+  <rect x="300" y="380" width="140" height="56" rx="8" fill="#FFFFFF" stroke="#4A5C68" stroke-width="2"/>
+  <text x="370" y="413" font-size="14" font-weight="700" text-anchor="middle" fill="#12222C">Cuadro eléctrico</text>
+  <path d="M300 408H50V272" fill="none" stroke="#C99A06" stroke-width="3" stroke-dasharray="8 6"/>
+  <text x="60" y="398" font-size="13" fill="#4A5C68">línea eléctrica propia</text>
+
+  <!-- Leyenda -->
+  <path d="M24 462H54" stroke="#B8650A" stroke-width="6"/><text x="62" y="467" font-size="13" fill="#12222C">Agua caliente que sale</text>
+  <path d="M230 462H260" stroke="#3B8DB8" stroke-width="6"/><text x="268" y="467" font-size="13" fill="#12222C">Agua que vuelve</text>
+  <path d="M410 462H440" stroke="#C99A06" stroke-width="3" stroke-dasharray="8 6"/><text x="448" y="467" font-size="13" fill="#12222C">Electricidad</text>
+</svg>

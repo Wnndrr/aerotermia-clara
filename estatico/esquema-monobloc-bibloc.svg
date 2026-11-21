@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Diferencia entre aerotermia monobloc y bibloc</title>
+  <desc id="d">En el monobloc todo el circuito de refrigerante está en la unidad exterior y a la casa entran tuberías de agua. En el bibloc el gas refrigerante viaja por la fachada hasta una unidad interior.</desc>
+  <rect width="900" height="400" rx="10" fill="#FFFFFF"/>
+
+  <!-- MONOBLOC -->
+  <text x="24" y="38" font-size="20" font-weight="700" fill="#12222C">Monobloc</text>
+  <text x="24" y="60" font-size="13" fill="#4A5C68">El refrigerante se queda fuera</text>
+  <rect x="20" y="80" width="170" height="170" rx="6" fill="#EEF6FA"/>
+  <text x="30" y="100" font-size="12" fill="#0E4C6B">Exterior</text>
+  <rect x="190" y="80" width="12" height="170" fill="#C9D3DA"/>
+  <text x="214" y="100" font-size="12" fill="#0E4C6B">Interior</text>
+  <rect x="35" y="115" width="140" height="110" rx="8" fill="#FFFFFF" stroke="#0E4C6B" stroke-width="2"/>
+  <rect x="47" y="127" width="116" height="86" rx="5" fill="#FCEBC9" stroke="#B8650A" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="105" y="160" font-size="12" text-anchor="middle" fill="#12222C">refrigerante</text>
+  <text x="105" y="176" font-size="12" text-anchor="middle" fill="#12222C">y compresor</text>
+  <text x="105" y="192" font-size="12" text-anchor="middle" fill="#12222C">+ intercambiador</text>
+  <path d="M175 152H260" stroke="#B8650A" stroke-width="6"/>
+  <path d="M175 184H260" stroke="#3B8DB8" stroke-width="6"/>
+  <rect x="260" y="115" width="160" height="110" rx="8" fill="#FFFFFF" stroke="#0E4C6B" stroke-width="2"/>
+  <text x="340" y="160" font-size="14" font-weight="700" text-anchor="middle" fill="#12222C">Módulo hidráulico</text>
+  <text x="340" y="180" font-size="12" text-anchor="middle" fill="#4A5C68">solo agua</text>
+  <text x="24" y="282" font-size="14" font-weight="700" fill="#12222C">Por la fachada pasa agua</text>
+  <text x="24" y="306" font-size="13" fill="#12222C">Instalación más sencilla.</text>
+  <text x="24" y="326" font-size="13" fill="#12222C">El agua exterior hay que protegerla</text>
+  <text x="24" y="344" font-size="13" fill="#12222C">de las heladas.</text>
+  <text x="24" y="368" font-size="13" fill="#12222C">Habitual en los equipos con R290.</text>
+
+  <!-- separador -->
+  <path d="M450 24V380" stroke="#D3DEE5" stroke-width="2"/>
+
+  <!-- BIBLOC -->
+  <text x="478" y="38" font-size="20" font-weight="700" fill="#12222C">Bibloc</text>
+  <text x="478" y="60" font-size="13" fill="#4A5C68">El refrigerante entra en la casa</text>
+  <rect x="474" y="80" width="170" height="170" rx="6" fill="#EEF6FA"/>
+  <text x="484" y="100" font-size="12" fill="#0E4C6B">Exterior</text>
+  <rect x="644" y="80" width="12" height="170" fill="#C9D3DA"/>
+  <text x="668" y="100" font-size="12" fill="#0E4C6B">Interior</text>
+  <rect x="489" y="115" width="140" height="110" rx="8" fill="#FFFFFF" stroke="#0E4C6B" stroke-width="2"/>
+  <rect x="501" y="127" width="116" height="86" rx="5" fill="#FCEBC9" stroke="#B8650A" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="559" y="166" font-size="12" text-anchor="middle" fill="#12222C">compresor</text>
+  <text x="559" y="182" font-size="12" text-anchor="middle" fill="#12222C">y ventilador</text>
+  <path d="M629 152H714" stroke="#7A5BA6" stroke-width="3"/>
+  <path d="M629 160H714" stroke="#7A5BA6" stroke-width="3"/>
+  <path d="M629 184H714" stroke="#7A5BA6" stroke-width="3"/>
+  <path d="M629 192H714" stroke="#7A5BA6" stroke-width="3"/>
+  <rect x="714" y="115" width="160" height="110" rx="8" fill="#FFFFFF" stroke="#0E4C6B" stroke-width="2"/>
+  <rect x="726" y="127" width="136" height="40" rx="5" fill="#FCEBC9" stroke="#B8650A" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="794" y="152" font-size="12" text-anchor="middle" fill="#12222C">intercambiador</text>
+  <text x="794" y="190" font-size="14" font-weight="700" text-anchor="middle" fill="#12222C">Unidad interior</text>
+  <text x="794" y="209" font-size="12" text-anchor="middle" fill="#4A5C68">refrigerante y agua</text>
+  <text x="478" y="282" font-size="14" font-weight="700" fill="#12222C">Por la fachada pasa gas refrigerante</text>
+  <text x="478" y="306" font-size="13" fill="#12222C">Sin agua fuera: no hay riesgo de heladas</text>
+  <text x="478" y="324" font-size="13" fill="#12222C">en las tuberías.</text>
+  <text x="478" y="348" font-size="13" fill="#12222C">La debe montar una empresa habilitada</text>
+  <text x="478" y="366" font-size="13" fill="#12222C">para manipular gases refrigerantes.</text>
+
+  <path d="M24 390H44" stroke="#B8650A" stroke-width="5"/><text x="50" y="394" font-size="12" fill="#4A5C68">ida de agua</text>
+  <path d="M130 390H150" stroke="#3B8DB8" stroke-width="5"/><text x="156" y="394" font-size="12" fill="#4A5C68">retorno de agua</text>
+  <path d="M478 390H498" stroke="#7A5BA6" stroke-width="3"/><text x="504" y="394" font-size="12" fill="#4A5C68">tuberías de gas refrigerante</text>
+</svg>

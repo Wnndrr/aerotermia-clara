@@ -102,7 +102,8 @@ def meter_anuncios(cuerpo):
     return "<h2".join(trozos)
 
 
-CALCULADORA = (EST / "calculadora.html").read_text(encoding="utf-8") if (EST / "calculadora.html").exists() else ""
+# Fragmentos reutilizables: estatico/calculadora.html se inserta donde ponga {{CALCULADORA}}, potencia.html en {{POTENCIA}}, etc.
+FRAGMENTOS = {f.stem.upper().replace("-", "_"): f.read_text(encoding="utf-8") for f in EST.glob("*.html")}
 
 
 def plantilla(meta, cuerpo, url, extra_head=""):
@@ -153,7 +154,8 @@ def plantilla(meta, cuerpo, url, extra_head=""):
     <p><strong>{MARCA}</strong><br>Información independiente sobre aerotermia para viviendas en España. No instalamos ni vendemos equipos.</p>
     <nav aria-label="Enlaces del pie">
       <a href="/guia/">Guía básica</a>
-      <a href="/calculadora/">Calculadora</a>
+      <a href="/calculadora/">Calculadora de precio</a>
+      <a href="/calculadora-potencia/">Calculadora de potencia</a>
       <a href="/sobre-nosotros/">Quiénes somos</a>
       <a href="/contacto/">Contacto</a>
       <a href="/aviso-legal/">Aviso legal</a>
@@ -165,7 +167,8 @@ def plantilla(meta, cuerpo, url, extra_head=""):
 </body>
 </html>
 """
-    pagina = pagina.replace("{{CALCULADORA}}", CALCULADORA)
+    for nombre, fragmento in FRAGMENTOS.items():
+        pagina = pagina.replace("{{%s}}" % nombre, fragmento)
     pagina = pagina.replace("{{TITULAR}}", TITULAR).replace("{{CORREO}}", CORREO).replace("{{MARCA}}", MARCA)
     return relativizar(pagina, url)
 
@@ -286,7 +289,7 @@ def main():
 
     # Archivos estáticos
     for f in EST.iterdir():
-        if f.name != "calculadora.html":
+        if f.suffix != ".html":
             shutil.copy(f, SAL / f.name)
     (SAL / ".nojekyll").write_text("")
     (SAL / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {DOMINIO}/sitemap.xml\n")

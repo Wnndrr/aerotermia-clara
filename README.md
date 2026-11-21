@@ -5,7 +5,7 @@ Web estática sobre aerotermia doméstica en España. No necesita WordPress ni s
 ## Carpetas
 
 - `contenido/` — los textos. Un archivo por página. Aquí se escribe y se corrige.
-- `estatico/` — estilos, calculadora y logotipo.
+- `estatico/` — estilos, calculadoras (precio y potencia), esquemas en SVG y logotipo. Los fragmentos `.html` de esta carpeta se insertan en las páginas donde aparece `{{NOMBRE}}`.
 - `docs/` — la web ya generada. Es lo que publica GitHub Pages. No se edita a mano.
 - `build.py` — genera `docs/` a partir de `contenido/`.
 

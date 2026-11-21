@@ -6,7 +6,7 @@
   // Rendimiento del sistema actual, precio por defecto del combustible (€/kWh) y cuota fija anual
   var SISTEMAS = {
     gas:     { rend: 0.92, precio: 0.08, fijo: 100 },
-    gasoleo: { rend: 0.85, precio: 0.11, fijo: 0 },
+    gasoleo: { rend: 0.85, precio: 0.15, fijo: 0 },
     propano: { rend: 0.90, precio: 0.14, fijo: 0 },
     elec:    { rend: 1.00, precio: null, fijo: 0 }
   };

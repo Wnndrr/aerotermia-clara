@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de potencia de aerotermia: cuántos kW necesita tu vivienda</title>
+<meta name="description" content="Calcula gratis qué potencia de aerotermia necesita tu casa según los m², el clima y el aislamiento, y comprueba si el equipo que te ofrecen está bien dimensionado.">
+<link rel="canonical" href="https://aerotermiaclara.es/calculadora-potencia/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Calculadora de potencia de aerotermia: cuántos kW necesita tu vivienda">
+<meta property="og:description" content="Calcula gratis qué potencia de aerotermia necesita tu casa según los m², el clima y el aislamiento, y comprueba si el equipo que te ofrecen está bien dimensionado.">
+<meta property="og:url" content="https://aerotermiaclara.es/calculadora-potencia/">
+<meta property="og:site_name" content="Aerotermia Clara">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../estilo.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://aerotermiaclara.es/"}, {"@type": "ListItem", "position": 2, "name": "Calculadora de potencia de aerotermia", "item": "https://aerotermiaclara.es/calculadora-potencia/"}]}</script>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="ancho cabecera-fila">
+    <a class="marca" href="../" aria-label="Aerotermia Clara, inicio">
+      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0E4C6B"/><path d="M7 20c3-6 6-6 9 0s6 6 9 0" fill="none" stroke="#F4B13E" stroke-width="2.6" stroke-linecap="round"/><path d="M7 13c3-6 6-6 9 0s6 6 9 0" fill="none" stroke="#BFE3F2" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <span>Aerotermia Clara</span>
+    </a>
+    <nav class="menu" aria-label="Secciones"><a href="../">Inicio</a><a href="../precios/">Precios</a><a href="../ayudas/">Ayudas</a><a href="../comparativas/">Comparativas</a><a href="../marcas/">Marcas</a><a href="../instalacion/">Instalación</a><a href="../consumo/">Consumo</a><a href="../problemas/">Problemas</a><a href="../calculadora/">Calculadora</a></nav>
+  </div>
+  <div class="franja" aria-hidden="true"></div>
+</header>
+<main id="contenido">
+<article class="ancho"><nav class="migas" aria-label="Estás en"><a href="../">Inicio</a></nav><h1>Calculadora de potencia de aerotermia</h1><p class="entrada texto">Calcula cuántos kW de aerotermia necesita tu vivienda y comprueba si el equipo de un presupuesto es razonable. Un equipo demasiado grande cuesta más y rinde peor; uno demasiado pequeño tira de la resistencia eléctrica en los días fríos.</p>
+
+<div style="max-width:46rem"><form class="calc" id="pot" onsubmit="return false">
+  <h2>Calcula la potencia</h2>
+  <div class="calc-campos">
+    <div><label for="p-m2">Superficie a calentar (m²)</label><input id="p-m2" type="number" min="20" max="500" step="5" value="100" inputmode="numeric"></div>
+    <div><label for="p-alt">Altura de los techos</label>
+      <select id="p-alt">
+        <option value="2.5" selected>Normal (2,5 m)</option>
+        <option value="2.8">Algo alta (2,8 m)</option>
+        <option value="3.2">Alta (3 m o más)</option>
+      </select></div>
+    <div><label for="p-zona">Clima de invierno</label>
+      <select id="p-zona">
+        <option value="0">Suave (Málaga, Valencia)</option>
+        <option value="1">Templado (Barcelona, Bilbao)</option>
+        <option value="2" selected>Frío (Madrid, Zaragoza)</option>
+        <option value="3">Muy frío (Burgos, León)</option>
+      </select></div>
+    <div><label for="p-ais">Aislamiento</label>
+      <select id="p-ais">
+        <option value="0">Bueno (después de 2007)</option>
+        <option value="1" selected>Medio (de 1980 a 2006)</option>
+        <option value="2">Malo (antes de 1980)</option>
+      </select></div>
+    <div><label for="p-tipo">Tipo de vivienda</label>
+      <select id="p-tipo">
+        <option value="0.85">Piso entre plantas</option>
+        <option value="1" selected>Ático o bajo</option>
+        <option value="1.15">Casa o adosado</option>
+      </select></div>
+  </div>
+  <div class="calc-salida" aria-live="polite">
+    <div class="calc-dato"><b id="p-calc">—</b><span>Potencia de calefacción necesaria</span></div>
+    <div class="calc-dato caliente"><b id="p-equipo">—</b><span>Equipo que deberían proponerte</span></div>
+    <div class="calc-dato"><b id="p-alerta">—</b><span>Si te ofrecen más de esto, pregunta por qué</span></div>
+    <div class="calc-dato"><b id="p-elec">—</b><span>Consumo eléctrico máximo aproximado de la bomba de calor</span></div>
+  </div>
+  <p class="calc-nota">Cálculo orientativo por superficie. El dato definitivo sale del cálculo de cargas térmicas que debe hacer el instalador visitando la vivienda. <a href="../calculadora-potencia/#metodo">Cómo se calcula</a>.</p>
+</form>
+<script src="../potencia.js" defer></script>
+</div>
+
+<div class="texto">
+<h2 id="metodo">Cómo se calcula</h2>
+<p>La calculadora usa el método rápido por superficie que emplean fabricantes y tiendas para una primera estimación. Tiene cuatro pasos:</p>
+<ol>
+  <li><strong>Vatios por metro cuadrado.</strong> Toma un coeficiente según el aislamiento y el clima de la tabla de abajo.</li>
+  <li><strong>Altura de los techos.</strong> El coeficiente supone techos de 2,5 m. Con techos más altos hay más aire que calentar, así que se aumenta en proporción.</li>
+  <li><strong>Tipo de vivienda.</strong> Un piso rodeado de otras viviendas calefactadas pierde menos calor que un ático o un bajo, y estos menos que una casa con todas sus paredes al exterior. Se aplica un 0,85, un 1 o un 1,15.</li>
+  <li><strong>Modelo comercial.</strong> Se redondea al tamaño de equipo inmediatamente superior que suelen fabricar las marcas.</li>
+</ol>
+
+<div class="tabla"><table>
+<caption>Coeficientes que usa la calculadora, en vatios por m² con techos de 2,5 m. Estimación propia a partir de las tablas orientativas del sector.</caption>
+<thead><tr><th>Aislamiento</th><th class="num">Suave</th><th class="num">Templado</th><th class="num">Frío</th><th class="num">Muy frío</th></tr></thead>
+<tbody>
+<tr><th>Bueno</th><td class="num">45 W</td><td class="num">50 W</td><td class="num">60 W</td><td class="num">70 W</td></tr>
+<tr><th>Medio</th><td class="num">60 W</td><td class="num">65 W</td><td class="num">80 W</td><td class="num">90 W</td></tr>
+<tr><th>Malo</th><td class="num">75 W</td><td class="num">90 W</td><td class="num">110 W</td><td class="num">125 W</td></tr>
+</tbody></table></div>
+<p>Qué cuenta como cada nivel de aislamiento: <strong>bueno</strong>, vivienda construida o reformada con aislamiento después de 2007; <strong>medio</strong>, construida entre 1980 y 2006, o más antigua con las ventanas cambiadas; <strong>malo</strong>, anterior a 1980 y sin reformar.</p>
+<p>Como contraste, Autosolar estima unos 6 kW para una vivienda de 120 m² bien aislada en Valencia y hasta 9 kW si el aislamiento es deficiente. Son 50 y 75 W por m², en línea con la fila de clima suave.</p>
+
+<h2>Qué significa cada resultado</h2>
+<ul>
+  <li><strong>Potencia de calefacción necesaria:</strong> el calor que pierde la casa en un día frío de invierno, que la bomba de calor tiene que reponer.</li>
+  <li><strong>Equipo que deberían proponerte:</strong> el modelo comercial más cercano por encima. Las potencias exactas cambian de una marca a otra.</li>
+  <li><strong>Si te ofrecen más de esto, pregunta por qué:</strong> un 30 % por encima del cálculo. Puede haber motivos, como una casa muy acristalada o un uso intenso de agua caliente, pero el instalador debe explicarlos.</li>
+  <li><strong>Consumo eléctrico máximo:</strong> lo que puede llegar a consumir la bomba de calor a plena potencia en el día más frío, suponiendo un rendimiento de 2,5. No incluye la resistencia eléctrica de apoyo, que suele ser de 3 kW o más si entra a la vez.</li>
+</ul>
+
+<h2>¿Y el agua caliente?</h2>
+<p>En una vivienda normal no hace falta sumar potencia para el agua caliente. La bomba de calor calienta el depósito en momentos concretos, y mientras lo hace deja de dar calefacción durante un rato. Solo en casas con muchas personas, bañeras grandes o un consumo muy alto conviene subir un escalón o elegir un depósito mayor.</p>
+
+<h2>Por qué no conviene sobredimensionar</h2>
+<p>Un equipo más grande de lo necesario no calienta mejor. Cuesta más, arranca y para muchas veces al día porque le sobra potencia, y eso reduce su rendimiento y su vida útil. Una bomba de calor rinde mejor trabajando de forma continua a media potencia.</p>
+
+<h2>Cuándo no sirve este cálculo</h2>
+<ul>
+  <li>Casas con mucha superficie de cristal o dobles alturas.</li>
+  <li>Viviendas muy expuestas al viento o en zonas de montaña por encima de unos 1.000 metros.</li>
+  <li>Casas con partes que no se van a calefactar, como un sótano o un garaje.</li>
+  <li>Edificios rehabilitados con aislamiento por el exterior, que pueden necesitar bastante menos.</li>
+</ul>
+<p>En todos los casos, pide al instalador el cálculo de cargas térmicas por escrito. Es su responsabilidad y la base para elegir el equipo.</p>
+
+<p>¿Ya sabes la potencia? Calcula el precio y el ahorro con la <a href="../calculadora/">calculadora de precio y ahorro</a>, o lee la guía completa sobre <a href="../instalacion/potencia-aerotermia-necesaria/">qué potencia de aerotermia necesitas</a>.</p>
+
+<p class="fuentes">Fuentes: método por superficie habitual en las guías de fabricantes y distribuidores; contraste con <a href="https://autosolar.es/eficiencia-energetica/que-potencia-electrica-se-necesita-para-la-aerotermia-valencia" rel="nofollow">Autosolar</a> y con la tabla de potencias por superficie de <a href="https://www.obramat.es/aerotermia-calefaccion" rel="nofollow">Obramat</a>. Coeficientes, factores de tipo de vivienda y rendimiento de diseño: estimaciones propias. Última revisión: 21 de noviembre de 2026.</p>
+</div></article>
+</main>
+<footer class="pie">
+  <div class="ancho pie-fila">
+    <p><strong>Aerotermia Clara</strong><br>Información independiente sobre aerotermia para viviendas en España. No instalamos ni vendemos equipos.</p>
+    <nav aria-label="Enlaces del pie">
+      <a href="../guia/">Guía básica</a>
+      <a href="../calculadora/">Calculadora de precio</a>
+      <a href="../calculadora-potencia/">Calculadora de potencia</a>
+      <a href="../sobre-nosotros/">Quiénes somos</a>
+      <a href="../contacto/">Contacto</a>
+      <a href="../aviso-legal/">Aviso legal</a>
+      <a href="../privacidad/">Privacidad</a>
+      <a href="../cookies/">Cookies</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

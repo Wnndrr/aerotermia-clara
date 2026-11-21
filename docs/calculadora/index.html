@@ -38,23 +38,23 @@
     <div><label for="c-m2">Superficie (m²)</label><input id="c-m2" type="number" min="30" max="400" step="5" value="100" inputmode="numeric"></div>
     <div><label for="c-zona">Invierno en tu zona</label>
       <select id="c-zona">
-        <option value="90">Frío (Burgos, León, Madrid)</option>
-        <option value="60" selected>Templado (Barcelona, Bilbao, Zaragoza)</option>
-        <option value="35">Suave (Sevilla, Valencia, Málaga)</option>
+        <option value="90">Frío (Madrid, León)</option>
+        <option value="60" selected>Templado (Barcelona)</option>
+        <option value="35">Suave (Sevilla, Málaga)</option>
       </select></div>
     <div><label for="c-sis">Calefacción actual</label>
       <select id="c-sis">
         <option value="gas" selected>Caldera de gas natural</option>
         <option value="gasoleo">Caldera de gasóleo</option>
         <option value="propano">Caldera de propano o butano</option>
-        <option value="elec">Radiadores o caldera eléctrica</option>
+        <option value="elec">Calefacción eléctrica</option>
       </select></div>
     <div><label for="c-em">Con aerotermia usarás</label>
       <select id="c-em">
-        <option value="exist">Tus radiadores actuales</option>
-        <option value="baja" selected>Radiadores de baja temperatura</option>
-        <option value="suelo">Suelo radiante (hay que instalarlo)</option>
-        <option value="suelo-hecho">Suelo radiante (ya lo tienes)</option>
+        <option value="exist">Mis radiadores actuales</option>
+        <option value="baja" selected>Radiadores de baja temp.</option>
+        <option value="suelo">Suelo radiante nuevo</option>
+        <option value="suelo-hecho">Suelo radiante que ya tengo</option>
       </select></div>
   </div>
   <details>
@@ -92,7 +92,7 @@
 <tbody>
 <tr><th>Electricidad</th><td class="num">0,18 €</td><td>Precio del kWh con impuestos, sin contar el término de potencia. La media de Eurostat para hogares españoles con consumo alto, con todo incluido, fue de 0,22 € en el primer semestre de 2026.</td></tr>
 <tr><th>Gas natural</th><td class="num">0,08 €</td><td>Eurostat situó en 0,079 € el precio medio con impuestos de los hogares españoles con calefacción de gas en el primer semestre de 2026.</td></tr>
-<tr><th>Gasóleo de calefacción</th><td class="num">0,11 €</td><td>Estimación propia: equivale a pagar el litro a 1,10 €.</td></tr>
+<tr><th>Gasóleo de calefacción</th><td class="num">0,15 €</td><td>El litro de gasóleo C costó de media 1,52 € en España en la semana del 19 de octubre de 2026, según el Boletín Petrolero de la Comisión Europea. Cada litro contiene unos 10,14 kWh.</td></tr>
 <tr><th>Propano</th><td class="num">0,14 €</td><td>Estimación propia. Varía mucho entre granel y bombonas.</td></tr>
 </tbody></table></div>
 <p>Si tu factura dice otra cosa, abre «Cambiar los precios de la energía» y pon tus cifras. Es lo que más mueve el resultado.</p>
@@ -106,7 +106,9 @@
   <li><strong>Una posible subida de potencia contratada</strong> y los cambios futuros en el precio de la luz y del gas.</li>
 </ul>
 
-<p class="fuentes">Fuentes: precios de instalación de <a href="https://climate.selectra.com/es/aerotermia/precio" rel="nofollow">Selectra (2026)</a>; precios de la energía de Eurostat, primer semestre de 2026, recogidos por <a href="https://selectra.es/energia/noticias/kwh-luz-2026-consumo-bajo-precio-caro" rel="nofollow">Selectra</a>. Demandas de calefacción y rendimientos: valores orientativos propios. Última revisión: 15 de noviembre de 2026.</p>
+<p>¿Quieres saber también qué equipo necesitas? Usa la <a href="../calculadora-potencia/">calculadora de potencia</a>.</p>
+
+<p class="fuentes">Fuentes: precios de instalación de <a href="https://climate.selectra.com/es/aerotermia/precio" rel="nofollow">Selectra (2026)</a>; precios de la energía de Eurostat, primer semestre de 2026, recogidos por <a href="https://selectra.es/energia/noticias/kwh-luz-2026-consumo-bajo-precio-caro" rel="nofollow">Selectra</a>. Gasóleo C: <a href="https://selectra.es/energia/info/calefaccion/gasoleo" rel="nofollow">Selectra, precio del gasoil de calefacción</a>. Demandas de calefacción y rendimientos: valores orientativos propios. Última revisión: 15 de noviembre de 2026.</p>
 </div></article>
 </main>
 <footer class="pie">
@@ -114,7 +116,8 @@
     <p><strong>Aerotermia Clara</strong><br>Información independiente sobre aerotermia para viviendas en España. No instalamos ni vendemos equipos.</p>
     <nav aria-label="Enlaces del pie">
       <a href="../guia/">Guía básica</a>
-      <a href="../calculadora/">Calculadora</a>
+      <a href="../calculadora/">Calculadora de precio</a>
+      <a href="../calculadora-potencia/">Calculadora de potencia</a>
       <a href="../sobre-nosotros/">Quiénes somos</a>
       <a href="../contacto/">Contacto</a>
       <a href="../aviso-legal/">Aviso legal</a>
