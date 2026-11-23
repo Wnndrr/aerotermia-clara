@@ -139,3 +139,6 @@ td.num, th.num { text-align: right; white-space: nowrap; }
   .esquema img { min-width: 640px; }
   .esquema figcaption::after { content: " Desliza el esquema para verlo entero."; }
 }
+
+/* NIF del titular en el aviso legal, en letra muy pequeña */
+.nif { font-size: 5px; vertical-align: middle; }

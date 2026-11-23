@@ -15,6 +15,7 @@ from pathlib import Path
 DOMINIO = "https://guiadeaerotermia.es"   # sin barra final
 MARCA = "Guía de Aerotermia"
 TITULAR = "Wanderson Badaro"
+NIF = "Y2989197Q"
 CORREO = "guiadeaerotermia@gmail.com"
 ADSENSE_ID = ""                           # p. ej. "ca-pub-1234567890123456" cuando AdSense apruebe la web
 
@@ -169,7 +170,7 @@ def plantilla(meta, cuerpo, url, extra_head=""):
 """
     for nombre, fragmento in FRAGMENTOS.items():
         pagina = pagina.replace("{{%s}}" % nombre, fragmento)
-    pagina = pagina.replace("{{TITULAR}}", TITULAR).replace("{{CORREO}}", CORREO).replace("{{MARCA}}", MARCA)
+    pagina = pagina.replace("{{TITULAR}}", TITULAR).replace("{{NIF}}", NIF).replace("{{CORREO}}", CORREO).replace("{{MARCA}}", MARCA)
     return relativizar(pagina, url)
 
 
