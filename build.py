@@ -14,7 +14,7 @@ from pathlib import Path
 # ---------------------------------------------------------------- Ajustes
 DOMINIO = "https://guiadeaerotermia.es"   # sin barra final
 MARCA = "Guía de Aerotermia"
-TITULAR = "Wanderson Badaro"
+TITULAR = "Wanderson"
 NIF = "Y2989197Q"
 CORREO = "guiadeaerotermia@gmail.com"
 ADSENSE_ID = ""                           # p. ej. "ca-pub-1234567890123456" cuando AdSense apruebe la web
