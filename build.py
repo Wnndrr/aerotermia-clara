@@ -15,7 +15,7 @@ from pathlib import Path
 DOMINIO = "https://guiadeaerotermia.es"   # sin barra final
 MARCA = "Guía de Aerotermia"
 TITULAR = "Wanderson Badaro"
-CORREO = "hola@guiadeaerotermia.es"        # cámbialo por el correo real
+CORREO = "guiadeaerotermia@gmail.com"
 ADSENSE_ID = ""                           # p. ej. "ca-pub-1234567890123456" cuando AdSense apruebe la web
 
 RAIZ = Path(__file__).parent

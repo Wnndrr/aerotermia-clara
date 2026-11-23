@@ -30,7 +30,7 @@ Web estática sobre aerotermia doméstica en España. No necesita WordPress ni s
 
 ## Antes de pedir AdSense
 
-- Cambia el correo de contacto en `build.py` (`CORREO`) por uno que exista.
+- El correo de contacto está en `build.py` (`CORREO`).
 - Revisa el aviso legal: la ley pide identificar al titular (nombre, NIF y domicilio o dirección de contacto).
 - Cuando AdSense apruebe la web, pon tu identificador en `ADSENSE_ID` dentro de `build.py`,
   vuelve a generar y activa en AdSense el mensaje de consentimiento de cookies para Europa.
