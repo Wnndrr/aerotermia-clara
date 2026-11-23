@@ -17,7 +17,8 @@ MARCA = "Guía de Aerotermia"
 TITULAR = "Wanderson"
 NIF = "Y2989197Q"
 CORREO = "guiadeaerotermia@gmail.com"
-ADSENSE_ID = ""                           # p. ej. "ca-pub-1234567890123456" cuando AdSense apruebe la web
+ADSENSE_ID = "ca-pub-5106525369154021"   # identificador de AdSense (código en el <head> y ads.txt)
+ADSENSE_SLOT = ""                         # id de un bloque de anuncios manual; vacío = sin bloques manuales
 
 RAIZ = Path(__file__).parent
 CONT = RAIZ / "contenido"
@@ -83,10 +84,10 @@ def relativizar(codigo, url):
 
 
 def anuncio(nombre):
-    if not ADSENSE_ID:
+    if not (ADSENSE_ID and ADSENSE_SLOT):
         return f"<!-- hueco de anuncio: {nombre} -->"
     return (f'<div class="anuncio"><ins class="adsbygoogle" style="display:block" '
-            f'data-ad-client="{ADSENSE_ID}" data-ad-format="auto" '
+            f'data-ad-client="{ADSENSE_ID}" data-ad-slot="{ADSENSE_SLOT}" data-ad-format="auto" '
             f'data-full-width-responsive="true"></ins>'
             f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></div>')
 
@@ -293,6 +294,8 @@ def main():
         if f.suffix != ".html":
             shutil.copy(f, SAL / f.name)
     (SAL / ".nojekyll").write_text("")
+    if ADSENSE_ID:
+        (SAL / "ads.txt").write_text("google.com, %s, DIRECT, f08c47fec0942fa0\n" % ADSENSE_ID.replace("ca-pub-", "pub-"))
     # Dominio propio para GitHub Pages
     (SAL / "CNAME").write_text(DOMINIO.replace("https://", "") + "\n")
     (SAL / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {DOMINIO}/sitemap.xml\n")
